@@ -1,3 +1,13 @@
 body {
-    margin: 0;
-} 
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+header {
+    height: 170px;
+    background: url("/img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
