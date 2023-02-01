@@ -6,15 +6,20 @@ const menu = document.getElementById("menu")
 
 document.addEventListener("click", function(e) {
     if (e.target.dataset.add) {
-        // console.log(e.target.dataset.add)
         const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
-        // console.log(quantityToUpdate.textContent)
-        // quantityToUpdate.textContent = parseInt(quantityToUpdate.value)
         let quantity = parseInt(quantityToUpdate.textContent)
         quantity += 1
         console.log(quantity)
         quantityToUpdate.textContent = quantity
-        // console.log(typeof quantity)
+    } else if (e.target.dataset.sub) {
+        const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
+        let quantity = parseInt(quantityToUpdate.textContent)
+        quantity -= 1
+        if (quantity < 0) {
+            quantity = 0
+        }
+        console.log(quantity)
+        quantityToUpdate.textContent = quantity
     }
 })
 
