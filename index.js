@@ -19,7 +19,7 @@ function handleAdd(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
     let quantity = parseInt(quantityToUpdate.textContent)
     quantity += 1
-    console.log(quantity)
+    // console.log(quantity)
     quantityToUpdate.textContent = quantity
 }
 
@@ -31,7 +31,7 @@ function handleSub(e) {
     if (quantity < 0) {
         quantity = 0
     }
-    console.log(quantity)
+    // console.log(quantity)
     quantityToUpdate.textContent = quantity
 }
 
