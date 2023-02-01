@@ -1,6 +1,7 @@
 import { menuArray } from "./data.js";
 
 const menu = document.getElementById("menu")
+const order = document.getElementById("order")
 
 // ⬇️ USER INTERFACE ⬇️
 
@@ -18,21 +19,29 @@ document.addEventListener("click", function(e) {
 function handleAdd(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
     let quantity = parseInt(quantityToUpdate.textContent)
+    
     quantity += 1
-    // console.log(quantity)
     quantityToUpdate.textContent = quantity
+
+    if (quantity) {
+        renderOrder()
+    }
 }
 
 // if a - is clicked, decrement that item's quantity
 function handleSub(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
     let quantity = parseInt(quantityToUpdate.textContent)
+    
     quantity -= 1
     if (quantity < 0) {
         quantity = 0
     }
-    // console.log(quantity)
     quantityToUpdate.textContent = quantity
+
+    if (!quantity) {
+        hideOrder()
+    }
 }
 
 // ⬇️ RENDER THE APP ⬇️
@@ -74,4 +83,14 @@ function renderIngredients(array) {
     return ingredients.slice(0, -2) // slice off last ", "
 }
 
-// renderMenuItems()
+// render order list
+function renderOrder() {
+    console.log("render order")
+}
+
+// hide order list
+function hideOrder() {
+    console.log("hide order")
+}
+
+renderMenuItems()

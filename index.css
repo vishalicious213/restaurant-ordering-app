@@ -7,6 +7,10 @@ body {
     background: #F5F5F5;
 }
 
+.hidden {
+    display: none;
+}
+
 /* HEADER */
 
 header {
