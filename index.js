@@ -2,6 +2,26 @@ import { menuArray } from "./data.js";
 
 const menu = document.getElementById("menu")
 
+// ⬇️ USER INTERFACE ⬇️
+
+document.addEventListener("click", function(e) {
+    if (e.target.dataset.add) {
+        // console.log(e.target.dataset.add)
+        const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
+        // console.log(quantityToUpdate.textContent)
+        // quantityToUpdate.textContent = parseInt(quantityToUpdate.value)
+        let quantity = parseInt(quantityToUpdate.textContent)
+        quantity += 1
+        console.log(quantity)
+        quantityToUpdate.textContent = quantity
+        // console.log(typeof quantity)
+    }
+})
+
+// ⬇️ EVENT HANDLERS ⬇️
+
+// ⬇️ RENDER THE APP ⬇️
+
 // render menu items
 function renderMenuItems() {
     menuArray.forEach(function(menuItem) {
@@ -18,9 +38,9 @@ function renderMenuItems() {
                 <p class="food-price">$${menuItem.price}</p>
             </div>
             <div class="menu-item-btns">
-                <div class="menu-item-btn" id="add" data-add="${menuItem.id}">-</div>
-                <div class="item-quantity">${quantity}</div>
-                <div class="menu-item-btn" id="sub" data-sub="${menuItem.id}">+</div>
+                <div class="menu-item-btn" id="sub" data-sub="${menuItem.id}">-</div>
+                <div class="item-quantity" data-qty="${menuItem.id}">${quantity}</div>
+                <div class="menu-item-btn" id="add" data-add="${menuItem.id}">+</div>
             </div>
         </div>
         <hr>        
