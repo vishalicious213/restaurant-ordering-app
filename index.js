@@ -113,17 +113,35 @@ function renderOrder(item, quantity) {
 
 // hide order list
 function hideOrder(item, quantity) {
-    const quantities = Array.from(document.getElementsByClassName("item-quantity"))
+    console.log("starting orderList", orderList)
+
+    // check if item is in orderList
+    const listItem = orderList.filter(function(it) {
+        return it.item === item
+    })[0]
+
+    console.log("listItem", listItem)
+
+    if (listItem) {
+        listItem.quantity = quantity
+    }
+
+    if (listItem.quantity === 0) {
+        console.log("remove this item")
+    }
+
+    console.log("ending orderList", orderList)
+    // const quantities = Array.from(document.getElementsByClassName("item-quantity"))
     // console.log(quantities)
 
-    quantities.forEach(function(q) {
-        if (q.textContent != "0") {
-            console.log("not zero", q.textContent)
-        } else {
-            console.log("hide item", item, "quantity", quantity)
-            order.classList.add("hidden")
-        }
-    })
+    // quantities.forEach(function(q) {
+    //     if (q.textContent != "0") {
+    //         console.log("not zero", q.textContent)
+    //     } else {
+    //         console.log("hide item", item, "quantity", quantity)
+    //         order.classList.add("hidden")
+    //     }
+    // })
 }
 
 renderMenuItems()
