@@ -90,7 +90,24 @@ function renderIngredients(array) {
 
 // render order list
 function renderOrder(item, quantity) {
-    console.log("render item", item, "quantity", quantity)
+    // console.log("render item", item, "quantity", quantity)
+    console.log("starting orderList", orderList)
+
+    // check if item is in orderList
+    const listItem = orderList.filter(function(it) {
+        return it.item === item
+    })[0]
+    
+    // console.log("listItem", listItem)
+
+    if (!listItem) {
+        orderList.push({item, quantity})
+    } else {
+        listItem.quantity = quantity
+    }
+
+    console.log("ending orderList", orderList)
+
     order.classList.remove("hidden")
 }
 
