@@ -36,12 +36,26 @@ header h3 {
 
 /* MENU */
 
+.menu-item {
+    /* outline: 1px solid red; */
+    display: flex;
+    align-items: center;
+    padding: 2.5rem;
+}
+
 .menu-item-img {
-    width: 5rem;
+    /* outline: 1px solid orange; */
+    width: 20%;
 }
 
 .food-pic {
     width: 100%;
+}
+
+.menu-item-details {
+    /* outline: 1px solid green; */
+    width: 60%;
+    padding: .5rem 2rem 0 2rem;
 }
 
 h3 {
@@ -60,8 +74,14 @@ h3 {
     margin-top: .25rem;
 }
 
+.menu-item-btns {
+    /* outline: 2px solid blue; */
+    display: flex;
+    justify-content: right;
+    width: 20%;
+}
+
 .menu-item-btn {
-    display: inline-block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5rem;
     font-weight: 100;
@@ -70,4 +90,8 @@ h3 {
     width: 2rem;
     border-radius: 50%;
     text-align: center;
+}
+
+hr {
+    width: 90%;
 }
