@@ -129,10 +129,15 @@ function hideOrder(item, quantity) {
     if (listItem.quantity === 0) {
         console.log("remove this item")
         const index = orderList.indexOf(listItem)
-        // console.log(index)
-        if (index) {
+        console.log(index)
+        if (index > -1) {
             orderList.splice(index, 1)
         }
+        console.log("orderList length", orderList.length)
+    }
+
+    if (orderList.length === 0) {
+        order.classList.add("hidden")
     }
 
     console.log("ending orderList", orderList)
