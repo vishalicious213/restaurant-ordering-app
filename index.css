@@ -7,6 +7,8 @@ body {
     background: #F5F5F5;
 }
 
+/* HEADER */
+
 header {
     /* height: 170px; */
     background: url("/img/header.jpg");
@@ -30,4 +32,42 @@ header h1 {
 
 header h3 {
     font-size: 1.5rem;
+}
+
+/* MENU */
+
+.menu-item-img {
+    width: 5rem;
+}
+
+.food-pic {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.food-details {
+    color: #8B8B8B;
+    margin: 0;
+}
+
+.food-price {
+    font-size: 1.25rem;
+    margin-top: .25rem;
+}
+
+.menu-item-btn {
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+    border: 1px solid #8B8B8B;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    text-align: center;
 }
