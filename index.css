@@ -78,6 +78,7 @@ h3 {
     /* outline: 2px solid blue; */
     display: flex;
     justify-content: right;
+    align-items: center;
     width: 20%;
 }
 
@@ -89,6 +90,12 @@ h3 {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
+    text-align: center;
+}
+
+.item-quantity {
+    width: 2rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 

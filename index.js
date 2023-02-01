@@ -5,7 +5,8 @@ const menu = document.getElementById("menu")
 // render menu items
 function renderMenuItems() {
     menuArray.forEach(function(menuItem) {
-        console.log(menuItem.name)
+        let quantity = 0
+
         menu.innerHTML += `
         <div class="menu-item">
             <div class="menu-item-img">
@@ -17,9 +18,9 @@ function renderMenuItems() {
                 <p class="food-price">$${menuItem.price}</p>
             </div>
             <div class="menu-item-btns">
-                <div class="menu-item-btn">-</div>
-                <div class="item-quantity"></div>
-                <div class="menu-item-btn">+</div>
+                <div class="menu-item-btn" id="add" data-add="${menuItem.id}">-</div>
+                <div class="item-quantity">${quantity}</div>
+                <div class="menu-item-btn" id="sub" data-sub="${menuItem.id}">+</div>
             </div>
         </div>
         <hr>        
