@@ -19,21 +19,23 @@ document.addEventListener("click", function(e) {
 // if a + is clicked, increment that item's quantity
 function handleAdd(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
-    console.log('add event', quantityToUpdate.dataset.qty)
+    const itemId = quantityToUpdate.dataset.qty
+    console.log('add event', itemId)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity += 1
     quantityToUpdate.textContent = quantity
 
     if (quantity) {
-        renderOrder(quantityToUpdate.dataset.qty)
+        renderOrder(quantityToUpdate.dataset.qty, quantity)
     }
 }
 
 // if a - is clicked, decrement that item's quantity
 function handleSub(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
-    console.log('sub event', quantityToUpdate.dataset.qty)
+    const itemId = quantityToUpdate.dataset.qty
+    console.log('sub event', itemId)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity -= 1
@@ -43,7 +45,7 @@ function handleSub(e) {
     quantityToUpdate.textContent = quantity
 
     if (!quantity) {
-        hideOrder(quantityToUpdate.dataset.qty)
+        hideOrder(quantityToUpdate.dataset.qty, quantity)
     }
 }
 
@@ -87,21 +89,21 @@ function renderIngredients(array) {
 }
 
 // render order list
-function renderOrder(item) {
-    console.log("render order", item)
+function renderOrder(item, quantity) {
+    console.log("render item", item, "quantity", quantity)
     order.classList.remove("hidden")
 }
 
 // hide order list
-function hideOrder(item) {
+function hideOrder(item, quantity) {
     const quantities = Array.from(document.getElementsByClassName("item-quantity"))
-    console.log(quantities)
+    // console.log(quantities)
 
     quantities.forEach(function(q) {
         if (q.textContent != "0") {
-            console.log(q.textContent)
+            console.log("not zero", q.textContent)
         } else {
-            console.log("hide order", item)
+            console.log("hide item", item, "quantity", quantity)
             order.classList.add("hidden")
         }
     })
