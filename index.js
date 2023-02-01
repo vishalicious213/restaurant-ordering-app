@@ -17,6 +17,8 @@ function renderMenuItems() {
                 <p class="food-price">$${menuItem.price}</p>
             </div>
             <div class="menu-item-btns">
+                <div class="menu-item-btn">-</div>
+                <div class="item-quantity"></div>
                 <div class="menu-item-btn">+</div>
             </div>
         </div>
