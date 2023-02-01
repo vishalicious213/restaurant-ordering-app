@@ -103,24 +103,18 @@ hr {
 
 /* ORDER */
 
-#order {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .centered-text {
     text-align: center;
     margin: 2.5rem 0;
 }
 
 #order-items {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     list-style-type: none;
 }
 
 .item {
-    /* outline: 1px solid blue; */
+    outline: 1px solid blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -153,13 +147,36 @@ hr {
 }
 
 #order-total {
-    /* outline: 1px solid blue; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 2.5rem;
+    outline: 1px solid blue;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding: 0 2.5rem; */
+    /* margin-left: 2.5rem; */
     margin-bottom: 3.25rem;
-    width: 86%;
+    /* width: 86%; */
+    /* margin: 0 auto; */
+}
+
+#total-label {
+    outline: 1px solid red;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+#total-price {
+    outline: 1px solid green;
+    display: inline-block;
+    /* width: 2rem; */
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
 }
 
 #order-button {
@@ -170,5 +187,4 @@ hr {
     border-radius: .25rem;
     width: 90%;
     height: 3rem;
-    margin-bottom: 2.5rem;
 }

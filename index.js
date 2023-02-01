@@ -74,4 +74,4 @@ function renderIngredients(array) {
     return ingredients.slice(0, -2) // slice off last ", "
 }
 
-renderMenuItems()
+// renderMenuItems()
