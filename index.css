@@ -100,3 +100,10 @@ h3 {
 hr {
     width: 90%;
 }
+
+/* ORDER */
+
+.centered-text {
+    text-align: center;
+    margin: 2.5rem 0;
+}
