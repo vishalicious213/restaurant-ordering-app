@@ -86,11 +86,20 @@ function renderIngredients(array) {
 // render order list
 function renderOrder() {
     console.log("render order")
+    order.classList.remove("hidden")
 }
 
 // hide order list
 function hideOrder() {
+    const quantities = Array.from(document.getElementsByClassName("item-quantity"))
+    console.log(quantities)
+
+    quantities.forEach(function(q) {
+        console.log(q.textContent)
+    })
+
     console.log("hide order")
+    order.classList.add("hidden")
 }
 
 renderMenuItems()
