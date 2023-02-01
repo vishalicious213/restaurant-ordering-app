@@ -122,6 +122,8 @@ function hideOrder(item, quantity) {
 
     console.log("listItem", listItem)
 
+    if (!listItem) return
+
     if (listItem) {
         listItem.quantity = quantity
     }
@@ -133,7 +135,6 @@ function hideOrder(item, quantity) {
         if (index > -1) {
             orderList.splice(index, 1)
         }
-        console.log("orderList length", orderList.length)
     }
 
     if (orderList.length === 0) {
