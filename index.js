@@ -128,20 +128,14 @@ function hideOrder(item, quantity) {
 
     if (listItem.quantity === 0) {
         console.log("remove this item")
+        const index = orderList.indexOf(listItem)
+        // console.log(index)
+        if (index) {
+            orderList.splice(index, 1)
+        }
     }
 
     console.log("ending orderList", orderList)
-    // const quantities = Array.from(document.getElementsByClassName("item-quantity"))
-    // console.log(quantities)
-
-    // quantities.forEach(function(q) {
-    //     if (q.textContent != "0") {
-    //         console.log("not zero", q.textContent)
-    //     } else {
-    //         console.log("hide item", item, "quantity", quantity)
-    //         order.classList.add("hidden")
-    //     }
-    // })
 }
 
 renderMenuItems()
