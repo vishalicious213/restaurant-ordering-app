@@ -109,12 +109,12 @@ hr {
 }
 
 #order-items {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     list-style-type: none;
 }
 
 .item {
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,17 +122,17 @@ hr {
 }
 
 .item-name {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     font-size: 1.75rem;
     font-weight: 400;
 }
 
 .item-remove {
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
 }
 
 .item-price {
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     display: inline-block;
     width: 2rem;
     font-size: 1.25rem;
@@ -140,8 +140,13 @@ hr {
     text-align: right;
 }
 
+.order-line {
+    height: 1px;
+    background-color: #8B8B8B;
+}
+
 #order-total {
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
