@@ -6,24 +6,34 @@ const menu = document.getElementById("menu")
 
 document.addEventListener("click", function(e) {
     if (e.target.dataset.add) {
-        const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
-        let quantity = parseInt(quantityToUpdate.textContent)
-        quantity += 1
-        console.log(quantity)
-        quantityToUpdate.textContent = quantity
+        handleAdd(e)
     } else if (e.target.dataset.sub) {
-        const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
-        let quantity = parseInt(quantityToUpdate.textContent)
-        quantity -= 1
-        if (quantity < 0) {
-            quantity = 0
-        }
-        console.log(quantity)
-        quantityToUpdate.textContent = quantity
+        handleSub(e)
     }
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
+
+// if a + is clicked, increment that item's quantity
+function handleAdd(e) {
+    const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
+    let quantity = parseInt(quantityToUpdate.textContent)
+    quantity += 1
+    console.log(quantity)
+    quantityToUpdate.textContent = quantity
+}
+
+// if a - is clicked, decrement that item's quantity
+function handleSub(e) {
+    const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
+    let quantity = parseInt(quantityToUpdate.textContent)
+    quantity -= 1
+    if (quantity < 0) {
+        quantity = 0
+    }
+    console.log(quantity)
+    quantityToUpdate.textContent = quantity
+}
 
 // ⬇️ RENDER THE APP ⬇️
 
@@ -43,9 +53,9 @@ function renderMenuItems() {
                 <p class="food-price">$${menuItem.price}</p>
             </div>
             <div class="menu-item-btns">
-                <div class="menu-item-btn" id="sub" data-sub="${menuItem.id}">-</div>
+                <button type="button" class="menu-item-btn" id="sub" data-sub="${menuItem.id}">-</button>
                 <div class="item-quantity" data-qty="${menuItem.id}">${quantity}</div>
-                <div class="menu-item-btn" id="add" data-add="${menuItem.id}">+</div>
+                <button type="button" class="menu-item-btn" id="add" data-add="${menuItem.id}">+</button>
             </div>
         </div>
         <hr>        

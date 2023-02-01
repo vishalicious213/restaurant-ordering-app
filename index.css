@@ -84,13 +84,11 @@ h3 {
 
 .menu-item-btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
     font-weight: 100;
     border: 1px solid #8B8B8B;
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    text-align: center;
 }
 
 .item-quantity {
