@@ -2,6 +2,7 @@ import { menuArray } from "./data.js";
 
 const menu = document.getElementById("menu")
 const order = document.getElementById("order")
+const orderList = []
 
 // ⬇️ USER INTERFACE ⬇️
 
@@ -18,19 +19,21 @@ document.addEventListener("click", function(e) {
 // if a + is clicked, increment that item's quantity
 function handleAdd(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
+    console.log('add event', quantityToUpdate.dataset.qty)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity += 1
     quantityToUpdate.textContent = quantity
 
     if (quantity) {
-        renderOrder()
+        renderOrder(quantityToUpdate.dataset.qty)
     }
 }
 
 // if a - is clicked, decrement that item's quantity
 function handleSub(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
+    console.log('sub event', quantityToUpdate.dataset.qty)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity -= 1
@@ -40,7 +43,7 @@ function handleSub(e) {
     quantityToUpdate.textContent = quantity
 
     if (!quantity) {
-        hideOrder()
+        hideOrder(quantityToUpdate.dataset.qty)
     }
 }
 
@@ -84,22 +87,24 @@ function renderIngredients(array) {
 }
 
 // render order list
-function renderOrder() {
-    console.log("render order")
+function renderOrder(item) {
+    console.log("render order", item)
     order.classList.remove("hidden")
 }
 
 // hide order list
-function hideOrder() {
+function hideOrder(item) {
     const quantities = Array.from(document.getElementsByClassName("item-quantity"))
     console.log(quantities)
 
     quantities.forEach(function(q) {
-        console.log(q.textContent)
+        if (q.textContent != "0") {
+            console.log(q.textContent)
+        } else {
+            console.log("hide order", item)
+            order.classList.add("hidden")
+        }
     })
-
-    console.log("hide order")
-    order.classList.add("hidden")
 }
 
 renderMenuItems()
