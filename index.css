@@ -108,13 +108,11 @@ hr {
     margin: 2.5rem 0;
 }
 
-#order-items {
-    outline: 1px solid red;
+.order-items {
     list-style-type: none;
 }
 
 .item {
-    outline: 1px solid blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,18 +120,15 @@ hr {
 }
 
 .item-name {
-    /* outline: 1px solid red; */
     font-size: 1.75rem;
     font-weight: 400;
 }
 
 .item-remove {
-    /* outline: 1px solid orange; */
     color: #BBBBBB;
 }
 
 .item-price {
-    /* outline: 1px solid green; */
     display: inline-block;
     width: 2rem;
     font-size: 1.25rem;
@@ -146,36 +141,10 @@ hr {
     background-color: #8B8B8B;
 }
 
-#order-total {
-    outline: 1px solid blue;
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* padding: 0 2.5rem; */
-    /* margin-left: 2.5rem; */
-    margin-bottom: 3.25rem;
-    /* width: 86%; */
-    /* margin: 0 auto; */
-}
-
-#total-label {
-    outline: 1px solid red;
-    font-size: 1.75rem;
-    font-weight: 400;
-}
-
-#total-price {
-    outline: 1px solid green;
-    display: inline-block;
-    /* width: 2rem; */
-    font-size: 1.25rem;
-    font-weight: 400;
-    text-align: right;
-}
-
 #button-container {
     display: flex;
     justify-content: center;
+    margin-top: 3.25rem;
     margin-bottom: 2.5rem;
 }
 
