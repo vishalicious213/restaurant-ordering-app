@@ -27,7 +27,7 @@ function handleAdd(e) {
     quantityToUpdate.textContent = quantity
 
     if (quantity) {
-        renderOrder(quantityToUpdate.dataset.qty, quantity)
+        showOrder(quantityToUpdate.dataset.qty, quantity)
     }
 }
 
@@ -88,8 +88,8 @@ function renderIngredients(array) {
     return ingredients.slice(0, -2) // slice off last ", "
 }
 
-// render order list
-function renderOrder(item, quantity) {
+// show order list
+function showOrder(item, quantity) {
     // console.log("render item", item, "quantity", quantity)
     console.log("starting orderList", orderList)
 
