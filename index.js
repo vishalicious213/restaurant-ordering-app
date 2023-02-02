@@ -109,7 +109,7 @@ function showOrder(item, quantity) {
 
     console.log("ending orderList", orderList)
 
-    renderOrder()
+    renderOrder(item)
     order.classList.remove("hidden")
 }
 
@@ -150,9 +150,16 @@ function renderOrder() {
     orderList.innerHTML = ""
 
     orderList.forEach(function(orderItem) {
+        // console.log("orderItem", orderItem)
+        const itemDetails = menuArray.filter(function(it) {
+            // console.log("it", typeof it.id)
+            // console.log("orderItem.item", typeof orderItem.item)
+            return it.id === parseInt(orderItem.item)
+        })[0]
+        // console.log("itemDetails", itemDetails)
         orderItems.innerHTML += `
         <li class="item">
-            <span class="item-name">Small Pizza</span>
+            <span class="item-name">${itemDetails.name}</span>
             <span>
                 <span class="item-remove">remove</span>
                 <span class="item-price">$14</span>
