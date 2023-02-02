@@ -174,3 +174,14 @@ hr {
     padding: 1rem;
     box-sizing: border-box;
 }
+
+#pay-modal input {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#pay-modal input::-webkit-outer-spin-button,
+#pay-modal input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
