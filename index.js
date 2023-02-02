@@ -134,6 +134,7 @@ function hideOrder(item, quantity) {
 
 // show the "bill" at the bottom of the screen
 function renderOrder() {
+    const orderButton = document.getElementById("order-button")
     orderItems.innerHTML = ""
     totalPrice.innerHTML = ""
     let total = 0
@@ -162,6 +163,12 @@ function renderOrder() {
             <span class="item-price">$${total}</span>
         </li>
     `
+
+    orderButton.addEventListener("click", openOrderModal)
+}
+
+function openOrderModal() {
+    console.log("opened")
 }
 
 renderMenuItems()
