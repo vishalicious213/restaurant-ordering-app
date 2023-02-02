@@ -4,6 +4,7 @@ const menu = document.getElementById("menu")
 const order = document.getElementById("order")
 const orderItems = document.getElementById("order-items")
 const totalPrice = document.getElementById("total-price")
+const payModal = document.getElementById("pay-modal")
 const orderList = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -119,9 +120,9 @@ function hideOrder(item, quantity) {
     }
 
     if (listItem.quantity === 0) {
-        console.log("remove this item")
+        // console.log("remove this item")
         const index = orderList.indexOf(listItem)
-        console.log(index)
+        // console.log(index)
         if (index > -1) {
             orderList.splice(index, 1)
         }
@@ -169,6 +170,7 @@ function renderOrder() {
 
 function openOrderModal() {
     console.log("opened")
+    payModal.style.display = "flex"
 }
 
-// renderMenuItems()
+renderMenuItems()
