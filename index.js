@@ -156,7 +156,7 @@ function renderOrder() {
 
         orderItems.innerHTML += `
             <li class="item">
-                <span class="item-name">${itemDetails.name}</span>
+                <span class="item-name">${itemDetails.name} x${orderItem.quantity}</span>
                 <span>
                     <span class="item-remove">remove</span>
                     <span class="item-price">$14</span>
