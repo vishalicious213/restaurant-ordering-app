@@ -176,10 +176,17 @@ hr {
 }
 
 #pay-modal input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
     width: 100%;
     margin-bottom: 1rem;
+    padding: .5rem .75rem .75rem;
+    box-sizing: border-box;
+    border: 1px solid #757575;
+    border-radius: .25rem;
 }
 
+/* hide increment/decrement arrows */
 #pay-modal input::-webkit-outer-spin-button,
 #pay-modal input::-webkit-inner-spin-button {
     -webkit-appearance: none;
