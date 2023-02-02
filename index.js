@@ -21,7 +21,7 @@ document.addEventListener("click", function(e) {
 function handleAdd(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
     const itemId = quantityToUpdate.dataset.qty
-    console.log('add event', itemId)
+    // console.log('add event', itemId)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity += 1
@@ -92,7 +92,7 @@ function renderIngredients(array) {
 // show order list
 function showOrder(item, quantity) {
     // console.log("render item", item, "quantity", quantity)
-    console.log("starting orderList", orderList)
+    // console.log("starting orderList", orderList)
 
     // check if item is in orderList
     const listItem = orderList.filter(function(it) {
@@ -107,7 +107,7 @@ function showOrder(item, quantity) {
         listItem.quantity = quantity
     }
 
-    console.log("ending orderList", orderList)
+    // console.log("ending orderList", orderList)
 
     renderOrder(item)
     order.classList.remove("hidden")
@@ -147,24 +147,21 @@ function hideOrder(item, quantity) {
 }
 
 function renderOrder() {
-    orderList.innerHTML = ""
+    orderItems.innerHTML = ""
 
     orderList.forEach(function(orderItem) {
-        // console.log("orderItem", orderItem)
         const itemDetails = menuArray.filter(function(it) {
-            // console.log("it", typeof it.id)
-            // console.log("orderItem.item", typeof orderItem.item)
             return it.id === parseInt(orderItem.item)
         })[0]
-        // console.log("itemDetails", itemDetails)
+
         orderItems.innerHTML += `
-        <li class="item">
-            <span class="item-name">${itemDetails.name}</span>
-            <span>
-                <span class="item-remove">remove</span>
-                <span class="item-price">$14</span>
-            </span>
-        </li>
+            <li class="item">
+                <span class="item-name">${itemDetails.name}</span>
+                <span>
+                    <span class="item-remove">remove</span>
+                    <span class="item-price">$14</span>
+                </span>
+            </li>
         `
     })
 }
