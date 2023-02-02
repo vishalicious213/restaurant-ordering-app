@@ -22,7 +22,6 @@ document.addEventListener("click", function(e) {
 function handleAdd(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
     const itemId = quantityToUpdate.dataset.qty
-    // console.log('add event', itemId)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity += 1
@@ -37,7 +36,6 @@ function handleAdd(e) {
 function handleSub(e) {
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
     const itemId = quantityToUpdate.dataset.qty
-    console.log('sub event', itemId)
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity -= 1
@@ -83,8 +81,6 @@ function renderMenuItems() {
 function renderIngredients(array) {
     let ingredients = ""
     array.forEach(function(ingredient) {
-        // console.log(ingredient)
-        // return `<span>${ingredient}</span>`
         ingredients += `${ingredient}, `
     })
     return ingredients.slice(0, -2) // slice off last ", "
@@ -92,23 +88,16 @@ function renderIngredients(array) {
 
 // show order list
 function showOrder(item, quantity) {
-    // console.log("render item", item, "quantity", quantity)
-    // console.log("starting orderList", orderList)
-
     // check if item is in orderList
     const listItem = orderList.filter(function(it) {
         return it.item === item
     })[0]
-    
-    // console.log("listItem", listItem)
 
     if (!listItem) {
         orderList.push({item, quantity})
     } else {
         listItem.quantity = quantity
     }
-
-    // console.log("ending orderList", orderList)
 
     renderOrder(item)
     order.classList.remove("hidden")
@@ -122,8 +111,6 @@ function hideOrder(item, quantity) {
     const listItem = orderList.filter(function(it) {
         return it.item === item
     })[0]
-
-    console.log("listItem", listItem)
 
     if (!listItem) return
 
@@ -143,10 +130,9 @@ function hideOrder(item, quantity) {
     if (orderList.length === 0) {
         order.classList.add("hidden")
     }
-
-    console.log("ending orderList", orderList)
 }
 
+// show the "bill" at the bottom of the screen
 function renderOrder() {
     orderItems.innerHTML = ""
     totalPrice.innerHTML = ""
@@ -176,7 +162,6 @@ function renderOrder() {
             <span class="item-price">$${total}</span>
         </li>
     `
-    console.log(total)
 }
 
 renderMenuItems()
