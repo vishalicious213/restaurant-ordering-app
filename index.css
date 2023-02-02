@@ -165,7 +165,6 @@ hr {
 /* PAY MODAL */
 
 #pay-modal {
-    outline: 1px solid red;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -173,6 +172,8 @@ hr {
     align-items: center;
     padding: 1rem;
     box-sizing: border-box;
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px #BABABA;
 }
 
 #pay-modal h3 {
