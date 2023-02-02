@@ -2,6 +2,7 @@ import { menuArray } from "./data.js";
 
 const menu = document.getElementById("menu")
 const order = document.getElementById("order")
+const orderItems = document.getElementById("order-items")
 const orderList = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -27,7 +28,7 @@ function handleAdd(e) {
     quantityToUpdate.textContent = quantity
 
     if (quantity) {
-        showOrder(quantityToUpdate.dataset.qty, quantity)
+        showOrder(itemId, quantity)
     }
 }
 
@@ -45,7 +46,7 @@ function handleSub(e) {
     quantityToUpdate.textContent = quantity
 
     if (!quantity) {
-        hideOrder(quantityToUpdate.dataset.qty, quantity)
+        hideOrder(itemId, quantity)
     }
 }
 
@@ -108,6 +109,7 @@ function showOrder(item, quantity) {
 
     console.log("ending orderList", orderList)
 
+    renderOrder()
     order.classList.remove("hidden")
 }
 
@@ -142,6 +144,22 @@ function hideOrder(item, quantity) {
     }
 
     console.log("ending orderList", orderList)
+}
+
+function renderOrder() {
+    orderList.innerHTML = ""
+
+    orderList.forEach(function(orderItem) {
+        orderItems.innerHTML += `
+        <li class="item">
+            <span class="item-name">Small Pizza</span>
+            <span>
+                <span class="item-remove">remove</span>
+                <span class="item-price">$14</span>
+            </span>
+        </li>
+        `
+    })
 }
 
 renderMenuItems()
