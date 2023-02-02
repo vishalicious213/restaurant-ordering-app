@@ -3,6 +3,7 @@ import { menuArray } from "./data.js";
 const menu = document.getElementById("menu")
 const order = document.getElementById("order")
 const orderItems = document.getElementById("order-items")
+const totalPrice = document.getElementById("total-price")
 const orderList = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -148,11 +149,15 @@ function hideOrder(item, quantity) {
 
 function renderOrder() {
     orderItems.innerHTML = ""
+    totalPrice.innerHTML = ""
+    let total = 0
 
     orderList.forEach(function(orderItem) {
         const itemDetails = menuArray.filter(function(it) {
             return it.id === parseInt(orderItem.item)
         })[0]
+
+        total += orderItem.quantity * itemDetails.price
 
         orderItems.innerHTML += `
             <li class="item">
@@ -164,6 +169,14 @@ function renderOrder() {
             </li>
         `
     })
+
+    totalPrice.innerHTML += `
+        <li class="item">
+            <span class="item-name">Total price:</span>
+            <span class="item-price">$${total}</span>
+        </li>
+    `
+    console.log(total)
 }
 
 renderMenuItems()
