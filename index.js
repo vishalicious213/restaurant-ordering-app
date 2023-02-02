@@ -159,7 +159,7 @@ function renderOrder() {
                 <span class="item-name">${itemDetails.name} x${orderItem.quantity}</span>
                 <span>
                     <span class="item-remove">remove</span>
-                    <span class="item-price">$14</span>
+                    <span class="item-price">$${orderItem.quantity * itemDetails.price}</span>
                 </span>
             </li>
         `
