@@ -71,6 +71,36 @@
             </div>
         </section>
     </main>
+
+    <div id="pay-modal">
+        <h3>Enter card details</h3>
+
+        <input 
+            type="text" 
+            id="fullName" 
+            name="fullName"
+            placeholder="Enter your name"
+            required
+        >
+
+        <input 
+            type="number" 
+            id="card" 
+            name="card"
+            placeholder="Enter card number"
+            required
+        >
+
+        <input 
+            type="number" 
+            id="cvv" 
+            name="cvv"
+            placeholder="Enter CVV"
+            required
+        >
+
+        <button id="pay-button">Pay</button>
+    </div>
     
     <script src="index.js" type="module"></script>
 </body>

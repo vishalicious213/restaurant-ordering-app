@@ -171,4 +171,4 @@ function openOrderModal() {
     console.log("opened")
 }
 
-renderMenuItems()
+// renderMenuItems()
