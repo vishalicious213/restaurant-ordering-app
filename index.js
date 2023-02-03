@@ -4,6 +4,7 @@ const menu = document.getElementById("menu")
 const order = document.getElementById("order")
 const orderItems = document.getElementById("order-items")
 const totalPrice = document.getElementById("total-price")
+const payModalContainer = document.getElementById("pay-modal-container")
 const payModal = document.getElementById("pay-modal")
 const orderList = []
 
@@ -169,7 +170,7 @@ function renderOrder() {
 }
 
 function openOrderModal() {
-    console.log("opened")
+    payModalContainer.style.display = "block"
     payModal.style.display = "flex"
 }
 
