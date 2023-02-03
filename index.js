@@ -6,6 +6,7 @@ const orderItems = document.getElementById("order-items")
 const totalPrice = document.getElementById("total-price")
 const payModalContainer = document.getElementById("pay-modal-container")
 const payModal = document.getElementById("pay-modal")
+const payForm = document.getElementById("pay-form")
 const orderList = []
 
 // ⬇️ USER INTERFACE ⬇️
@@ -54,7 +55,6 @@ function handleSub(e) {
 
 // open the pay modal & close it if cancel button is clicked
 function handleCompleteOrder() {
-    const payForm = document.getElementById("pay-form")
     const cancelButton = document.getElementById("cancel-button")
 
     payModalContainer.style.display = "flex"
@@ -73,6 +73,15 @@ function handleCompleteOrder() {
 function handlePay(e) {
     e.preventDefault()
     console.log("pay clicked")
+
+    payModal.innerHTML = `
+        <form id="order-complete">
+            <button id="complete-button" type="submit">
+                <h3>Thank you for your order!</h3>
+                <div>Click to close</div>
+            </button>
+        </form>
+    `
 }
 
 // close the pay-modal

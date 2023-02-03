@@ -235,3 +235,36 @@ hr {
 #cancel-button:hover {
     background-color: #BE3737;   
 }
+
+/* ORDER COMPLETE MODAL (replaces pay modal content */
+
+#order-complete {
+    width: 100%;
+}
+
+#complete-button {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: .25rem;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+#complete-button h3 {
+    font-family: 'Smythe', cursive;
+    font-size: 1.75rem;
+    font-weight: 100;
+    color: #464646;
+    margin: 0;
+}
+
+#complete-button div {
+    font-family: 'Smythe', cursive;
+    font-size: 1rem;
+    color: #8B8B8B;
+    margin: .75rem 0 0;
+}
+
+#complete-button:hover {
+    cursor: pointer;
+}
