@@ -4,7 +4,7 @@ const menu = document.getElementById("menu")
 const menuMain = document.getElementById("nav-main")
 const menuSides = document.getElementById("nav-sides")
 const menuDrinks = document.getElementById("nav-drinks")
-let subMenu = []
+let subMenu = mainsArray
 const order = document.getElementById("order")
 const orderItems = document.getElementById("order-items")
 const totalPrice = document.getElementById("total-price")
@@ -106,7 +106,7 @@ function handleCloseModal() {
 
 // render menu items
 function renderMenuItems() {
-    menuArray.forEach(function(menuItem) {
+    subMenu.forEach(function(menuItem) {
         let quantity = 0
 
         menu.innerHTML += `
@@ -188,7 +188,7 @@ function renderOrder() {
     let total = 0
 
     orderList.forEach(function(orderItem) {
-        const itemDetails = menuArray.filter(function(it) {
+        const itemDetails = subMenu.filter(function(it) {
             return it.id === parseInt(orderItem.item)
         })[0]
 
