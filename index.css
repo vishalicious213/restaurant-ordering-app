@@ -153,13 +153,15 @@ h3 {
 .food-price {
     font-size: 1.25rem;
     margin-top: .25rem;
+    margin-bottom: .75rem;
 }
 
 .menu-item-btns {
+    outline: 1px solid red;
     display: flex;
     justify-content: right;
     align-items: center;
-    width: 40%;
+    width: 35%;
 }
 
 .menu-item-btn {
