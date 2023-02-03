@@ -61,29 +61,44 @@ nav {
     padding: 1rem;
     box-sizing: border-box;
     background-color: #434247;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid orangered;
 }
 
 nav button {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: baseline;
     border: none;
     width: 5rem;
     padding: .5rem 3.5rem;
     border-radius: .25rem;
     background-color: #28282b;
-    color: white;
+    font-family: 'Smythe', cursive;
+    font-size: 1.5rem;
 }
 
 nav button:hover {
     cursor: pointer;
+    outline: 1px solid goldenrod;
 }
 
 nav button i {
-    color: white;
     font-size: 1.25rem;
-    margin-bottom: .5rem;
+    margin-right: .5rem;
     pointer-events: none;
+}
+
+#nav-main i {
+    color: goldenrod;
+}
+
+#nav-sides i {
+    color: orange;
+}
+
+#nav-drinks i {
+    color: chocolate;
 }
 
 nav button div {
