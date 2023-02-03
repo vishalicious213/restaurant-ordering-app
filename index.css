@@ -80,7 +80,7 @@ h3 {
 }
 
 .food-details {
-    color: rgba(245, 245, 245, 0.829);
+    color: rgba(245, 245, 245, 0.8);
     margin: 0;
     text-shadow: 0 0 1px brown;
 }
@@ -111,6 +111,11 @@ h3 {
     width: 2rem;
     font-size: 1.5rem;
     text-align: center;
+    color: white;
+    text-shadow: 0 0 1px brown;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin: 0 .25rem;
+    border-radius: .25rem;
 }
 
 hr {
