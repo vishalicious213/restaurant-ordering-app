@@ -83,10 +83,12 @@ nav button i {
     color: white;
     font-size: 1.25rem;
     margin-bottom: .5rem;
+    pointer-events: none;
 }
 
 nav button div {
     color: gainsboro;
+    pointer-events: none;
 }
 
 /* MENU */
