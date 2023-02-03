@@ -72,7 +72,6 @@ function handleCompleteOrder() {
 // if the pay button is clicked in the pay-form
 function handlePay(e) {
     e.preventDefault()
-    console.log("pay clicked")
 
     payModal.innerHTML = `
         <form id="order-complete">
@@ -146,8 +145,6 @@ function showOrder(item, quantity) {
 
 // hide order list
 function hideOrder(item, quantity) {
-    console.log("starting orderList", orderList)
-
     // check if item is in orderList
     const listItem = orderList.filter(function(it) {
         return it.item === item
@@ -160,9 +157,7 @@ function hideOrder(item, quantity) {
     }
 
     if (listItem.quantity === 0) {
-        // console.log("remove this item")
         const index = orderList.indexOf(listItem)
-        // console.log(index)
         if (index > -1) {
             orderList.splice(index, 1)
         }
