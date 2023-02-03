@@ -102,7 +102,15 @@ export const menuArray = [
         emoji: "🥤",
         image: "/img/soda.jpg",
         id: 12
-    }
+    },
+    {
+        name: "Sliders",
+        ingredients: ["beef", "mayonnaise", "lettuce"],
+        price: 12,
+        emoji: "🍔",
+        image: "/img/sliders.jpg",
+        id: 12
+    },
 ]
 
 export const mainsArray = [
@@ -137,6 +145,14 @@ export const mainsArray = [
         emoji: "🍔",
         image: "/img/cheese-burger.jpg",
         id: 3
+    },
+    {
+        name: "Sliders",
+        ingredients: ["beef", "mayonnaise", "lettuce"],
+        price: 12,
+        emoji: "🍔",
+        image: "/img/sliders.jpg",
+        id: 12
     },
 ]
 
