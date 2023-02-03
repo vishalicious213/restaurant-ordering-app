@@ -51,7 +51,7 @@ header h3 {
     font-size: 1.5rem;
 }
 
-/* NAV (the menu sections */
+/* NAV (the menu sections) */
 
 nav {
     display: flex;
@@ -117,12 +117,12 @@ nav button div {
     pointer-events: none;
 }
 
-/* MENU */
+/* MENU (the food items) */
 
 .menu-item {
     display: flex;
     align-items: center;
-    padding: 2.5rem;
+    padding: 1rem;
     background-size: cover;
     background-position: center;
 }
@@ -392,9 +392,15 @@ footer {
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 480px) {
+    /* NAV */
     nav button {
         width: 5rem;
         padding: .5rem 3.5rem;
         font-size: 1.5rem;
+    }
+
+    /* MENU */
+    .menu-item {
+        padding: 2.5rem;
     }
 }
