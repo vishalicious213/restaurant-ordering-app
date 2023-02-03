@@ -1,6 +1,9 @@
 import { menuArray } from "./data.js";
 
 const menu = document.getElementById("menu")
+const menuMain = document.getElementById("nav-main")
+const menuSides = document.getElementById("nav-sides")
+const menuDrinks = document.getElementById("nav-drinks")
 const order = document.getElementById("order")
 const orderItems = document.getElementById("order-items")
 const totalPrice = document.getElementById("total-price")
@@ -17,6 +20,12 @@ document.addEventListener("click", function(e) {
         handleAdd(e)
     } else if (e.target.dataset.sub) {
         handleSub(e)
+    } else if (e.target === menuMain) {
+        console.log("main")
+    } else if (e.target === menuSides) {
+        console.log("sides")
+    } else if (e.target === menuDrinks) {
+        console.log("drinks")
     }
 })
 
