@@ -4,7 +4,9 @@ body {
     max-width: 600px;
     font-family: 'Smythe', cursive;
     font-weight: 400;
-    background: #F5F5F5;
+    /* background: #F5F5F5; */
+    background: rgb(37, 37, 37);
+    /* background: rgba(133, 61, 20, 0.25); */
 }
 
 .hidden {
@@ -199,9 +201,14 @@ hr {
 
 /* ORDER */
 
+#order {
+    background: #F5F5F5;
+}
+
 .centered-text {
     text-align: center;
     margin: 2.5rem 0;
+    padding-top: 1.5rem;
 }
 
 .order-items {
@@ -251,6 +258,7 @@ hr {
     justify-content: center;
     margin-top: 3.25rem;
     margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
 }
 
 #order-button {
