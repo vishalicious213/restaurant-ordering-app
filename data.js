@@ -66,7 +66,7 @@ export const menuArray = [
     {
         name: "Beer",
         ingredients: ["grain", "hops", "yeast", "water"],
-        price: 12,
+        price: 10,
         emoji: "🍺",
         image: "/img/beer.jpg",
         id: 8
@@ -74,25 +74,33 @@ export const menuArray = [
     {
         name: "Wine",
         ingredients: ["grapes", "yeast", "sugar", "water"],
-        price: 12,
+        price: 10,
         emoji: "🍷",
         image: "/img/wine.jpg",
         id: 9
     },
     {
+        name: "Coffee",
+        ingredients: ["coffee beans", "water", "milk foam", "sweetener"],
+        price: 8,
+        emoji: "🥛",
+        image: "/img/coffee.jpg",
+        id: 10
+    },
+    {
         name: "Milk Shake",
         ingredients: ["chocolate", "vanilla", "strawberry"],
-        price: 12,
+        price: 8,
         emoji: "🥛",
         image: "/img/shake.jpg",
-        id: 10
+        id: 11
     },
     {
         name: "Fountain Soda",
         ingredients: ["water", "syrup", "carbon dioxide"],
-        price: 10,
+        price: 6,
         emoji: "🥤",
         image: "/img/soda.jpg",
-        id: 11
+        id: 12
     }
 ]
