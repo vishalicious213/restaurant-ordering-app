@@ -20,18 +20,14 @@ document.addEventListener("click", function(e) {
     if (e.target.dataset.add) {
         handleAdd(e)
     } else if (e.target.dataset.sub) {
-        console.log("sub event listener")
         handleSub(e)
     } else if (e.target === menuMain) {
-        console.log("main")
         subMenu = mainsArray
         renderMenuItems()
     } else if (e.target === menuSides) {
-        console.log("sides")
         subMenu = sidesArray
         renderMenuItems()
     } else if (e.target === menuDrinks) {
-        console.log("drinks")
         subMenu = drinksArray
         renderMenuItems()
     }
@@ -50,7 +46,6 @@ function handleAdd(e) {
     quantityToUpdate.textContent = quantity
 
     // if (quantity) {
-        console.log("handleAdd => showOrder")
         showOrder(itemId, quantity)
     // }
 }
@@ -69,7 +64,6 @@ function handleSub(e) {
     quantityToUpdate.textContent = quantity
 
     // if (!quantity) {
-        console.log("handleSub => hideOrder")
         hideOrder(itemId, quantity)
     // }
 }
