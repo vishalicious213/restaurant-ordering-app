@@ -109,6 +109,7 @@ function handleCloseModal() {
 
 // render menu items
 function renderMenuItems() {
+    menu.innerHTML = ``
     subMenu.forEach(function(menuItem) {
         let quantity = 0
 
