@@ -22,5 +22,13 @@ export const menuArray = [
         emoji: "🍺",
         image: "/img/beer.jpg",
         id: 2
+    },
+    {
+        name: "Milk Shake",
+        ingredients: ["chocolate", "vanilla", "strawberry"],
+        price: 12,
+        emoji: "🥤",
+        image: "/img/shake.jpg",
+        id: 3
     }
 ]
