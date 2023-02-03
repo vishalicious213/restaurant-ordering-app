@@ -271,3 +271,18 @@ hr {
 #complete-button:hover {
     cursor: pointer;
 }
+
+/* FOOTER */
+
+footer {
+    background-image: url("/img/footer.jpg");
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    color: white;
+}
+
+.footer-text {
+    width: 50%;
+}
