@@ -182,6 +182,7 @@ hr {
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
     background-color: transparent;
     width: 100%;
     height: 100%;
@@ -189,6 +190,7 @@ hr {
 
 #pay-modal {
     width: 90%;
+    max-width: 540px;
     display: none; /* flex when #order-button is clicked */
     flex-direction: column;
     align-items: center;
