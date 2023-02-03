@@ -31,7 +31,7 @@ document.addEventListener("click", function(e) {
         subMenu = drinksArray
         renderMenuItems()
     } else if (e.target.dataset.id) {
-        console.log(e.target.dataset.id)
+        handleRemoveFromBill(e.target.dataset.id)
     }
 })
 
@@ -64,6 +64,20 @@ function handleSub(e) {
     quantityToUpdate.textContent = quantity
 
     hideOrder(itemId, quantity)
+}
+
+// remove item (regardless of quantity) from bill
+function handleRemoveFromBill(removalId) {
+    // get item from orderList if it exists & use its quantity value in .item-quantity
+    const existingItem = orderList.filter(function(it) {
+        return it.item === removalId
+    })[0]
+
+    // get index of existingItem from orderList, delete it and render everything
+    const itemToRemove = orderList.indexOf(existingItem)
+    orderList.splice(itemToRemove, 1)
+    renderMenuItems()
+    renderOrder()
 }
 
 // open the pay modal & close it if cancel button is clicked
