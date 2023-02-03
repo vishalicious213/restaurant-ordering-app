@@ -166,12 +166,20 @@ function renderOrder() {
         </li>
     `
 
-    orderButton.addEventListener("click", openOrderModal)
+    orderButton.addEventListener("click", openPayModal)
 }
 
-function openOrderModal() {
+// open the pay modal & close it if cancel button is clicked
+function openPayModal() {
+    const cancelButton = document.getElementById("cancel-button")
+
     payModalContainer.style.display = "block"
     payModal.style.display = "flex"
+
+    cancelButton.addEventListener("click", function() {
+        payModalContainer.style.display = "none"
+        payModal.style.display = "none"
+    })
 }
 
 renderMenuItems()
