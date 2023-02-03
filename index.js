@@ -10,6 +10,7 @@ const orderList = []
 
 // ⬇️ USER INTERFACE ⬇️
 
+// listen for clicks on the + and - buttons for menu items
 document.addEventListener("click", function(e) {
     if (e.target.dataset.add) {
         handleAdd(e)
@@ -53,18 +54,18 @@ function handleSub(e) {
 
 // open the pay modal & close it if cancel button is clicked
 function handleCompleteOrder() {
-    const cancelButton = document.getElementById("cancel-button")
     const payForm = document.getElementById("pay-form")
+    const cancelButton = document.getElementById("cancel-button")
 
     payModalContainer.style.display = "flex"
     payModal.style.display = "flex"
 
-    cancelButton.addEventListener("click", function() {
-        handleCloseModal()
-    })
-
     payForm.addEventListener("submit", function(e) {
         handlePay(e)
+    })
+
+    cancelButton.addEventListener("click", function() {
+        handleCloseModal()
     })
 }
 
