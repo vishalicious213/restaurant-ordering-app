@@ -157,7 +157,6 @@ h3 {
 }
 
 .menu-item-btns {
-    outline: 1px solid red;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -190,10 +189,6 @@ h3 {
     background-color: rgba(0, 0, 0, 0.25);
     margin: 0 .25rem;
     border-radius: .25rem;
-}
-
-hr {
-    width: 90%;
 }
 
 /* ORDER */
