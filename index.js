@@ -51,6 +51,23 @@ function handleSub(e) {
     }
 }
 
+// open the pay modal & close it if cancel button is clicked
+function handleCompleteOrder() {
+    const cancelButton = document.getElementById("cancel-button")
+    const payForm = document.getElementById("pay-form")
+
+    payModalContainer.style.display = "flex"
+    payModal.style.display = "flex"
+
+    cancelButton.addEventListener("click", function() {
+        handleCloseModal()
+    })
+
+    payForm.addEventListener("submit", function(e) {
+        handlePay(e)
+    })
+}
+
 // if the pay button is clicked in the pay-form
 function handlePay(e) {
     e.preventDefault()
@@ -178,26 +195,7 @@ function renderOrder() {
         </li>
     `
 
-    orderButton.addEventListener("click", openPayModal)
-}
-
-// open the pay modal & close it if cancel button is clicked
-function openPayModal() {
-    const cancelButton = document.getElementById("cancel-button")
-    const payForm = document.getElementById("pay-form")
-
-    payModalContainer.style.display = "flex"
-    payModal.style.display = "flex"
-
-    cancelButton.addEventListener("click", function() {
-        handleCloseModal()
-        // payModalContainer.style.display = "none"
-        // payModal.style.display = "none"
-    })
-
-    payForm.addEventListener("submit", function(e) {
-        handlePay(e)
-    })
+    orderButton.addEventListener("click", handleCompleteOrder)
 }
 
 renderMenuItems()
