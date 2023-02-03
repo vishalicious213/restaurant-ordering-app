@@ -64,9 +64,12 @@ nav {
 }
 
 nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: none;
     width: 5rem;
-    padding: .5rem 1rem;
+    padding: .5rem 3.5rem;
     border-radius: .25rem;
     background-color: #28282b;
     color: white;
@@ -74,6 +77,16 @@ nav button {
 
 nav button:hover {
     cursor: pointer;
+}
+
+nav button i {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+nav button div {
+    color: gainsboro;
 }
 
 /* MENU */
