@@ -114,20 +114,13 @@ function handleCloseModal() {
 
 // render menu items
 function renderMenuItems() {
-    console.log("orderList", orderList)
-    // get item from orderList if it exists
-    // use orderList's quantity value
     menu.innerHTML = ``
     subMenu.forEach(function(menuItem) {
         let quantity = 0
+        // get item from orderList if it exists & use its quantity value in .item-quantity
         let existingItem = orderList.filter(function(it) {
-            console.log("it.item", it.item)
             return parseInt(it.item) == menuItem.id
         })[0]
-        console.log("existingItem", existingItem)
-        // console.log("existingItem.quantity", existingItem.quantity)
-        // console.log("menuItem.id", menuItem.id)
-        // console.log("orderList item", existingItem)
 
         menu.innerHTML += `
             <div class="menu-item" data-div="${menuItem.id}">
