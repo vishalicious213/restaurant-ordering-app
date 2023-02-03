@@ -109,7 +109,7 @@ function renderMenuItems() {
         let quantity = 0
         // get item from orderList if it exists & use its quantity value in .item-quantity
         let existingItem = orderList.filter(function(it) {
-            return parseInt(it.item) == menuItem.id
+            return parseInt(it.item) === menuItem.id
         })[0]
 
         menu.innerHTML += `
@@ -204,7 +204,7 @@ function renderOrder() {
             <li class="item">
                 <span class="item-name">${itemDetails.name} <span class="item-qty">x${orderItem.quantity}</span></span>
                 <span>
-                    <span class="item-remove">remove</span>
+                    <span class="item-remove" data-id="${itemDetails.id}">remove</span>
                     <span class="item-price">$${orderItem.quantity * itemDetails.price}</span>
                 </span>
             </li>
