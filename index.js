@@ -1,4 +1,4 @@
-import { menuArray } from "./data.js";
+import { mainsArray, sidesArray, drinksArray } from "./data.js";
 
 const menu = document.getElementById("menu")
 const menuMain = document.getElementById("nav-main")
