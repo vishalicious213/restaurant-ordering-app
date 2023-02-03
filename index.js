@@ -20,6 +20,7 @@ document.addEventListener("click", function(e) {
     if (e.target.dataset.add) {
         handleAdd(e)
     } else if (e.target.dataset.sub) {
+        console.log("sub event listener")
         handleSub(e)
     } else if (e.target === menuMain) {
         console.log("main")
@@ -40,22 +41,25 @@ document.addEventListener("click", function(e) {
 
 // if a + is clicked, increment that item's quantity
 function handleAdd(e) {
+    // get element where "add button data attribute" matches "item-quantity data attribute"
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.add}"]`)
-    const itemId = quantityToUpdate.dataset.qty
+    const itemId = quantityToUpdate.dataset.qty // get data-add value
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity += 1
     quantityToUpdate.textContent = quantity
 
-    if (quantity) {
+    // if (quantity) {
+        console.log("handleAdd => showOrder")
         showOrder(itemId, quantity)
-    }
+    // }
 }
 
 // if a - is clicked, decrement that item's quantity
 function handleSub(e) {
+    // get element where "sub button data attribute" matches "item-quantity data attribute"
     const quantityToUpdate = document.querySelector(`[data-qty="${e.target.dataset.sub}"]`)
-    const itemId = quantityToUpdate.dataset.qty
+    const itemId = quantityToUpdate.dataset.qty // get data-sub value
     let quantity = parseInt(quantityToUpdate.textContent)
     
     quantity -= 1
@@ -64,9 +68,10 @@ function handleSub(e) {
     }
     quantityToUpdate.textContent = quantity
 
-    if (!quantity) {
+    // if (!quantity) {
+        console.log("handleSub => hideOrder")
         hideOrder(itemId, quantity)
-    }
+    // }
 }
 
 // open the pay modal & close it if cancel button is clicked
@@ -155,7 +160,7 @@ function showOrder(item, quantity) {
         listItem.quantity = quantity
     }
 
-    renderOrder(item)
+    renderOrder()
     order.classList.remove("hidden")
 }
 
@@ -171,10 +176,6 @@ function hideOrder(item, quantity) {
     if (listItem) {
         listItem.quantity = quantity
     }
-
-    // if (listItem.quantity > 0) {
-    //     renderOrder()
-    // }
 
     // if quantity is 0, remove item from orderList
     if (listItem.quantity === 0) {
