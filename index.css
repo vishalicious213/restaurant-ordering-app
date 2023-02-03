@@ -162,6 +162,11 @@ hr {
     color: #BBBBBB;
 }
 
+.item-remove:hover {
+    cursor: pointer;
+    color: #979797;
+}
+
 .item-price {
     display: inline-block;
     width: 2rem;

@@ -30,6 +30,8 @@ document.addEventListener("click", function(e) {
     } else if (e.target === menuDrinks) {
         subMenu = drinksArray
         renderMenuItems()
+    } else if (e.target.dataset.id) {
+        console.log(e.target.dataset.id)
     }
 })
 
