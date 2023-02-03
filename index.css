@@ -168,7 +168,9 @@ hr {
 /* PAY MODAL */
 
 #pay-modal-container {
-    display: none; /* change when #order-button is clicked */
+    display: none; /* flex when #order-button is clicked */
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     background-color: transparent;
@@ -178,18 +180,13 @@ hr {
 
 #pay-modal {
     width: 90%;
-    margin: 0 auto;
-    display: none; /* change when #order-button is clicked */
+    display: none; /* flex when #order-button is clicked */
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 5px 5px 15px 5px #BABABA;
-    position: fixed;
-    top: 25%;
-    right: 0;
-    left: 0;
 }
 
 #pay-modal h3 {

@@ -173,7 +173,7 @@ function renderOrder() {
 function openPayModal() {
     const cancelButton = document.getElementById("cancel-button")
 
-    payModalContainer.style.display = "block"
+    payModalContainer.style.display = "flex"
     payModal.style.display = "flex"
 
     cancelButton.addEventListener("click", function() {
