@@ -59,21 +59,18 @@ header h3 {
     display: flex;
     align-items: center;
     padding: 2.5rem;
-}
-
-.menu-item-img {
-    /* outline: 1px solid orange; */
-    width: 20%;
-}
-
-.food-pic {
-    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .menu-item-details {
-    /* outline: 1px solid green; */
-    width: 60%;
+    outline: 1px solid black;
+    width: 40%;
     padding: .5rem 2rem 0 2rem;
+    color: white;
+    text-shadow: 0 0 1px brown;
+    background-color: rgba(133, 61, 20, 0.25);
+    border-radius: .5rem;
 }
 
 h3 {
@@ -83,8 +80,9 @@ h3 {
 }
 
 .food-details {
-    color: #8B8B8B;
+    color: rgba(245, 245, 245, 0.829);
     margin: 0;
+    text-shadow: 0 0 1px brown;
 }
 
 .food-price {
@@ -97,7 +95,7 @@ h3 {
     display: flex;
     justify-content: right;
     align-items: center;
-    width: 20%;
+    width: 40%;
 }
 
 .menu-item-btn {

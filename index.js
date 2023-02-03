@@ -97,23 +97,22 @@ function renderMenuItems() {
         let quantity = 0
 
         menu.innerHTML += `
-        <div class="menu-item">
-            <div class="menu-item-img">
-                <img class="food-pic" src="${menuItem.image}" alt="${menuItem.name}">
+            <div class="menu-item" data-div="${menuItem.id}">
+                <div class="menu-item-details">
+                    <h3>${menuItem.name}</h3>
+                    <p class="food-details">${renderIngredients(menuItem.ingredients)}</p>
+                    <p class="food-price">$${menuItem.price}</p>
+                </div>
+                <div class="menu-item-btns">
+                    <button type="button" class="menu-item-btn" id="sub" data-sub="${menuItem.id}">-</button>
+                    <div class="item-quantity" data-qty="${menuItem.id}">${quantity}</div>
+                    <button type="button" class="menu-item-btn" id="add" data-add="${menuItem.id}">+</button>
+                </div>
             </div>
-            <div class="menu-item-details">
-                <h3>${menuItem.name}</h3>
-                <p class="food-details">${renderIngredients(menuItem.ingredients)}</p>
-                <p class="food-price">$${menuItem.price}</p>
-            </div>
-            <div class="menu-item-btns">
-                <button type="button" class="menu-item-btn" id="sub" data-sub="${menuItem.id}">-</button>
-                <div class="item-quantity" data-qty="${menuItem.id}">${quantity}</div>
-                <button type="button" class="menu-item-btn" id="add" data-add="${menuItem.id}">+</button>
-            </div>
-        </div>
-        <hr>        
         `
+
+    const backgroundImg = document.querySelector(`[data-div="${menuItem.id}"]`)
+    backgroundImg.style.backgroundImage = `url("${menuItem.image}")`
     })
 }
 
