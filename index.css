@@ -60,6 +60,7 @@ nav {
     justify-content: space-evenly;
     padding: 1rem;
     box-sizing: border-box;
+    background-image: url("/img/nav.png");
     background-color: #434247;
     border-top: 1px solid goldenrod;
     border-bottom: 1px solid orangered;
@@ -69,9 +70,9 @@ nav button {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    border: none;
     width: 5rem;
     padding: .5rem 3.5rem;
+
     border-radius: .25rem;
     background-color: #28282b;
     font-family: 'Smythe', cursive;
@@ -81,6 +82,18 @@ nav button {
 nav button:hover {
     cursor: pointer;
     outline: 1px solid goldenrod;
+}
+
+#nav-main {
+    border: 1px solid goldenrod;
+}
+
+#nav-sides {
+    border: 1px solid orange;
+}
+
+#nav-drinks {
+    border: 1px solid chocolate;
 }
 
 nav button i {
