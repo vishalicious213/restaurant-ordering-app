@@ -4,6 +4,7 @@ const menu = document.getElementById("menu")
 const menuMain = document.getElementById("nav-main")
 const menuSides = document.getElementById("nav-sides")
 const menuDrinks = document.getElementById("nav-drinks")
+let subMenu = []
 const order = document.getElementById("order")
 const orderItems = document.getElementById("order-items")
 const totalPrice = document.getElementById("total-price")
@@ -22,10 +23,13 @@ document.addEventListener("click", function(e) {
         handleSub(e)
     } else if (e.target === menuMain) {
         console.log("main")
+        subMenu = mainsArray
     } else if (e.target === menuSides) {
         console.log("sides")
+        subMenu = sidesArray
     } else if (e.target === menuDrinks) {
         console.log("drinks")
+        subMenu = drinksArray
     }
 })
 
