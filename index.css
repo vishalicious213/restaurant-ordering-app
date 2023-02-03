@@ -20,6 +20,11 @@ body {
     height: 3rem;
 }
 
+.app-button:hover {
+    cursor: pointer;
+    background-color: #12AF7A;
+}
+
 /* HEADER */
 
 header {
@@ -225,4 +230,8 @@ hr {
 
 #cancel-button {
     background-color: #EE4545;
+}
+
+#cancel-button:hover {
+    background-color: #BE3737;   
 }
