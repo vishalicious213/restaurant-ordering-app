@@ -122,6 +122,7 @@ nav button div {
 .menu-item {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     padding: 1rem;
     background-size: cover;
     background-position: center;
@@ -130,7 +131,7 @@ nav button div {
 .menu-item-details {
     outline: 1px solid black;
     width: 40%;
-    padding: .5rem 2rem 0 2rem;
+    padding: .5rem 1rem 0 1rem;
     color: white;
     text-shadow: 0 0 1px brown;
     background-color: rgba(133, 61, 20, 0.25);
@@ -402,5 +403,9 @@ footer {
     /* MENU */
     .menu-item {
         padding: 2.5rem;
+    }
+
+    .menu-item-details {
+        padding: .5rem 2rem 0 2rem;
     }
 }
