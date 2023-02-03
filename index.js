@@ -57,6 +57,12 @@ function handlePay(e) {
     console.log("pay clicked")
 }
 
+// close the pay-modal
+function handleCloseModal() {
+    payModalContainer.style.display = "none"
+    payModal.style.display = "none"
+}
+
 // ⬇️ RENDER THE APP ⬇️
 
 // render menu items
@@ -178,18 +184,17 @@ function renderOrder() {
 // open the pay modal & close it if cancel button is clicked
 function openPayModal() {
     const cancelButton = document.getElementById("cancel-button")
-    // const payButton = document.getElementById("pay-button")
     const payForm = document.getElementById("pay-form")
 
     payModalContainer.style.display = "flex"
     payModal.style.display = "flex"
 
     cancelButton.addEventListener("click", function() {
-        payModalContainer.style.display = "none"
-        payModal.style.display = "none"
+        handleCloseModal()
+        // payModalContainer.style.display = "none"
+        // payModal.style.display = "none"
     })
 
-    // payButton.addEventListener("submit", function(e) {
     payForm.addEventListener("submit", function(e) {
         handlePay(e)
     })
