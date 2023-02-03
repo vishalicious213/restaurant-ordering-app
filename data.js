@@ -109,7 +109,15 @@ export const menuArray = [
         price: 12,
         emoji: "🍔",
         image: "/img/sliders.jpg",
-        id: 12
+        id: 13
+    },
+    {
+        name: "Potato Wedges",
+        ingredients: ["potatoes", "canola oil", "salt"],
+        price: 8,
+        emoji: "🥔",
+        image: "/img/potato-wedge.jpg",
+        id: 14
     },
 ]
 
@@ -152,7 +160,7 @@ export const mainsArray = [
         price: 12,
         emoji: "🍔",
         image: "/img/sliders.jpg",
-        id: 12
+        id: 13
     },
 ]
 
@@ -188,6 +196,14 @@ export const sidesArray = [
         emoji: "🥦",
         image: "/img/salad.jpg",
         id: 7
+    },
+    {
+        name: "Potato Wedges",
+        ingredients: ["potatoes", "canola oil", "salt"],
+        price: 8,
+        emoji: "🥔",
+        image: "/img/potato-wedge.jpg",
+        id: 14
     },
 ]
 
