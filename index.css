@@ -60,10 +60,20 @@ nav {
     justify-content: space-evenly;
     padding: 1rem;
     box-sizing: border-box;
+    background-color: #434247;
 }
 
 nav button {
+    border: none;
+    width: 5rem;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    background-color: #28282b;
+    color: white;
+}
 
+nav button:hover {
+    cursor: pointer;
 }
 
 /* MENU */
