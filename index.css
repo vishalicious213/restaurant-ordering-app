@@ -53,6 +53,19 @@ header h3 {
     font-size: 1.5rem;
 }
 
+/* NAV (the menu sections */
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+nav button {
+
+}
+
 /* MENU */
 
 .menu-item {
