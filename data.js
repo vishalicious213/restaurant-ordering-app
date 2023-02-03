@@ -17,11 +17,19 @@ export const menuArray = [
     },
     {
         name: "Hamburger",
-        ingredients: ["beef", "cheese", "lettuce"],
-        price: 12,
+        ingredients: ["beef", "mayonnaise", "lettuce"],
+        price: 10,
         emoji: "🍔",
         image: "/img/burger.jpg",
         id: 2
+    },
+    {
+        name: "Cheeseburger",
+        ingredients: ["beef", "cheese", "lettuce"],
+        price: 12,
+        emoji: "🍔",
+        image: "/img/cheese-burger.jpg",
+        id: 3
     },
     {
         name: "French Fries",
@@ -29,7 +37,7 @@ export const menuArray = [
         price: 8,
         emoji: "🍟",
         image: "/img/fries.jpg",
-        id: 3
+        id: 4
     },
         {
         name: "Beer",
@@ -37,7 +45,7 @@ export const menuArray = [
         price: 12,
         emoji: "🍺",
         image: "/img/beer.jpg",
-        id: 4
+        id: 5
     },
     {
         name: "Milk Shake",
@@ -45,7 +53,7 @@ export const menuArray = [
         price: 12,
         emoji: "🥛",
         image: "/img/shake.jpg",
-        id: 5
+        id: 6
     },
     {
         name: "Fountain Soda",
@@ -53,6 +61,6 @@ export const menuArray = [
         price: 10,
         emoji: "🥤",
         image: "/img/soda.jpg",
-        id: 6
+        id: 7
     }
 ]
