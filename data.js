@@ -39,13 +39,21 @@ export const menuArray = [
         image: "/img/fries.jpg",
         id: 4
     },
-        {
+    {
+        name: "Onion Rings",
+        ingredients: ["onions", "breadcrumbs", "canola oil"],
+        price: 8,
+        emoji: "🍟",
+        image: "/img/onion-rings.jpg",
+        id: 5
+    },
+    {
         name: "Beer",
         ingredients: ["grain", "hops", "yeast", "water"],
         price: 12,
         emoji: "🍺",
         image: "/img/beer.jpg",
-        id: 5
+        id: 6
     },
     {
         name: "Milk Shake",
@@ -53,7 +61,7 @@ export const menuArray = [
         price: 12,
         emoji: "🥛",
         image: "/img/shake.jpg",
-        id: 6
+        id: 7
     },
     {
         name: "Fountain Soda",
@@ -61,6 +69,6 @@ export const menuArray = [
         price: 10,
         emoji: "🥤",
         image: "/img/soda.jpg",
-        id: 7
+        id: 8
     }
 ]
