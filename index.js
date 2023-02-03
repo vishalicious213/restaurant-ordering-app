@@ -45,9 +45,7 @@ function handleAdd(e) {
     quantity += 1
     quantityToUpdate.textContent = quantity
 
-    // if (quantity) {
-        showOrder(itemId, quantity)
-    // }
+    showOrder(itemId, quantity)
 }
 
 // if a - is clicked, decrement that item's quantity
@@ -63,9 +61,7 @@ function handleSub(e) {
     }
     quantityToUpdate.textContent = quantity
 
-    // if (!quantity) {
-        hideOrder(itemId, quantity)
-    // }
+    hideOrder(itemId, quantity)
 }
 
 // open the pay modal & close it if cancel button is clicked
