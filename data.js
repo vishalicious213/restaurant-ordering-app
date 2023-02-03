@@ -72,12 +72,20 @@ export const menuArray = [
         id: 8
     },
     {
+        name: "Wine",
+        ingredients: ["grapes", "yeast", "sugar", "water"],
+        price: 12,
+        emoji: "🍷",
+        image: "/img/wine.jpg",
+        id: 9
+    },
+    {
         name: "Milk Shake",
         ingredients: ["chocolate", "vanilla", "strawberry"],
         price: 12,
         emoji: "🥛",
         image: "/img/shake.jpg",
-        id: 9
+        id: 10
     },
     {
         name: "Fountain Soda",
@@ -85,6 +93,6 @@ export const menuArray = [
         price: 10,
         emoji: "🥤",
         image: "/img/soda.jpg",
-        id: 10
+        id: 11
     }
 ]
