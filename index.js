@@ -24,12 +24,15 @@ document.addEventListener("click", function(e) {
     } else if (e.target === menuMain) {
         console.log("main")
         subMenu = mainsArray
+        renderMenuItems()
     } else if (e.target === menuSides) {
         console.log("sides")
         subMenu = sidesArray
+        renderMenuItems()
     } else if (e.target === menuDrinks) {
         console.log("drinks")
         subMenu = drinksArray
+        renderMenuItems()
     }
 })
 
