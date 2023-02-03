@@ -72,8 +72,8 @@ nav button {
     align-items: baseline;
     width: 5rem;
     padding: .5rem 3.5rem;
-
     border-radius: .25rem;
+    background-image: url("/img/nav-button.png");
     background-color: #28282b;
     font-family: 'Smythe', cursive;
     font-size: 1.5rem;
