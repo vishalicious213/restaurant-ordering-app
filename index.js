@@ -51,6 +51,12 @@ function handleSub(e) {
     }
 }
 
+// if the pay button is clicked in the pay-form
+function handlePay(e) {
+    e.preventDefault()
+    console.log("pay clicked")
+}
+
 // ⬇️ RENDER THE APP ⬇️
 
 // render menu items
@@ -172,7 +178,8 @@ function renderOrder() {
 // open the pay modal & close it if cancel button is clicked
 function openPayModal() {
     const cancelButton = document.getElementById("cancel-button")
-    const payButton = document.getElementById("pay-button")
+    // const payButton = document.getElementById("pay-button")
+    const payForm = document.getElementById("pay-form")
 
     payModalContainer.style.display = "flex"
     payModal.style.display = "flex"
@@ -182,9 +189,9 @@ function openPayModal() {
         payModal.style.display = "none"
     })
 
-    payButton.addEventListener("click", function(e) {
-        e.preventDefault()
-        console.log("pay clicked")
+    // payButton.addEventListener("submit", function(e) {
+    payForm.addEventListener("submit", function(e) {
+        handlePay(e)
     })
 }
 
