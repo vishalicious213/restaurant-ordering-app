@@ -68,13 +68,13 @@ nav button {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    width: 5rem;
-    padding: .5rem 3.5rem;
+    width: 3.5rem;
+    padding: .5rem 3rem;
     border-radius: .25rem;
     background-image: url("/img/nav-button.png");
     background-color: #28282b;
     font-family: 'Smythe', cursive;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 nav button:hover {
@@ -387,4 +387,14 @@ footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 480px) {
+    nav button {
+        width: 5rem;
+        padding: .5rem 3.5rem;
+        font-size: 1.5rem;
+    }
 }
