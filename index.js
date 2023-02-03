@@ -1,4 +1,4 @@
-import { mainsArray, sidesArray, drinksArray } from "./data.js";
+import { menuArray, mainsArray, sidesArray, drinksArray } from "./data.js";
 
 const menu = document.getElementById("menu")
 const menuMain = document.getElementById("nav-main")
@@ -192,7 +192,7 @@ function renderOrder() {
     let total = 0
 
     orderList.forEach(function(orderItem) {
-        const itemDetails = subMenu.filter(function(it) {
+        const itemDetails = menuArray.filter(function(it) {
             return it.id === parseInt(orderItem.item)
         })[0]
 
