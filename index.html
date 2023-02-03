@@ -75,33 +75,34 @@
     <div id="pay-modal-container">
         <div id="pay-modal">
             <h3 class="pay-header">Enter card details</h3>
+            <form id="pay-form">
+                <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName"
+                    placeholder="Enter your name"
+                    required
+                >
 
-            <input 
-                type="text" 
-                id="fullName" 
-                name="fullName"
-                placeholder="Enter your name"
-                required
-            >
+                <input 
+                    type="number" 
+                    id="card" 
+                    name="card"
+                    placeholder="Enter card number"
+                    required
+                >
 
-            <input 
-                type="number" 
-                id="card" 
-                name="card"
-                placeholder="Enter card number"
-                required
-            >
+                <input 
+                    type="number" 
+                    id="cvv" 
+                    name="cvv"
+                    placeholder="Enter CVV"
+                    required
+                >
 
-            <input 
-                type="number" 
-                id="cvv" 
-                name="cvv"
-                placeholder="Enter CVV"
-                required
-            >
-
-            <button id="pay-button" class="app-button">Pay</button>
-            <button id="cancel-button" class="app-button">Cancel</button>
+                <button id="pay-button" class="app-button" type="submit">Pay</button>
+                <button id="cancel-button" class="app-button" type="button">Cancel</button>
+            </form>
         </div>
     </div>
     

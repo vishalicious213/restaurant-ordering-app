@@ -172,6 +172,7 @@ function renderOrder() {
 // open the pay modal & close it if cancel button is clicked
 function openPayModal() {
     const cancelButton = document.getElementById("cancel-button")
+    const payButton = document.getElementById("pay-button")
 
     payModalContainer.style.display = "flex"
     payModal.style.display = "flex"
@@ -179,6 +180,11 @@ function openPayModal() {
     cancelButton.addEventListener("click", function() {
         payModalContainer.style.display = "none"
         payModal.style.display = "none"
+    })
+
+    payButton.addEventListener("click", function(e) {
+        e.preventDefault()
+        console.log("pay clicked")
     })
 }
 
