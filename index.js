@@ -172,12 +172,19 @@ function hideOrder(item, quantity) {
         listItem.quantity = quantity
     }
 
+    // if (listItem.quantity > 0) {
+    //     renderOrder()
+    // }
+
+    // if quantity is 0, remove item from orderList
     if (listItem.quantity === 0) {
         const index = orderList.indexOf(listItem)
         if (index > -1) {
             orderList.splice(index, 1)
         }
     }
+
+    renderOrder()
 
     if (orderList.length === 0) {
         order.classList.add("hidden")
