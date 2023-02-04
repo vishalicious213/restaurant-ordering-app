@@ -2,6 +2,8 @@
 
 This was a Scrimba solo project. We were given a Figma design and had to build a restaurant ordering application. The main requirements (other than following the design spec) were that the application had to render the restaurant's menu options using JavaScript (we were given an array of data with a burger, pizza and beer), visitors had to be able to add/remove items from their order and we needed to build a payment modal with compulsory form inputs (name, credit card number and CVV).
 
+This is a slide image with the Figma design: https://raw.githubusercontent.com/vishalicious213/restaurant-ordering-app/main/img/restaurant-ordering-app.jpg
+
 I built the project as required, but then moved on to customize it and add features, as well as completely different theme. Here's some of what I added:
 
 - additional dishes (adding data to the array - we went from 3 to 15)
