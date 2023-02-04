@@ -81,3 +81,28 @@ Deployed at: https://vish213-jimmys-diner.netlify.app/
 - -webkit-outer-spin-button
 - -webkit-inner-spin-button
 - -webkit-appearance: none
+
+## HTML concepts
+
+- Semantic HTML
+    - header
+    - nav
+    - main
+    - section
+    - footer
+- i-tags (for Font Awesome icons)
+- buttons
+    - type="submit"
+    - type="button"
+- classes
+- IDs
+- unordered lists
+- horizontal rows
+- forms
+    - inputs
+        - type="text"
+        - type="number"
+        - placeholders
+        - required
+- script tags
+    - type="module"
