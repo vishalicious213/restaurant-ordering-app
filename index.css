@@ -372,6 +372,7 @@ footer {
 
 .footer-text {
     width: 50%;
+    margin-right: 1rem;
 }
 
 .social {
@@ -385,6 +386,10 @@ footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 /* MEDIA QUERIES */
