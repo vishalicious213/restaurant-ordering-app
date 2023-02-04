@@ -23,13 +23,20 @@ Deployed at: https://vish213-jimmys-diner.netlify.app/
 - variables
 - arrays
     - .filter()
+    - .forEach()
     - .indexOf()
+    - .push()
     - .splice()
+    - .slice()
 - objects
 - functions
     - event handlers
+    - return
 - if conditionals
 - if...else conditionals
+- the NOT operator (!)
+- ternary operator
+- string/template literals
 - module imports & exports
 - document.getElementById()
 - document.querySelector()
@@ -37,9 +44,15 @@ Deployed at: https://vish213-jimmys-diner.netlify.app/
 - document.addEventListener()
     - event.target
     - event.target.dataset
+    - event.preventDefault()
     - "click"
     - "submit"
 - element.textContent
 - element.style
 - element.style.display
+- element.style.backgroundImage
+- element.innerHTML
+- element.classList
+- element.classList.add
+- element.classList.remove
 - parseInt()
