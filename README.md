@@ -14,4 +14,32 @@ I built the project as required, but then moved on to customize it and add featu
 - disabling the rest of the interface when the payment modal was onscreen, so people couldn't change their order while sending a payment
 - a footer
 
+There were *many* JavaScript and CSS concepts used in this projects that weren't needed for the provided design. The customizations called for them. They're included in the sections below.
+
 Deployed at: https://vish213-jimmys-diner.netlify.app/
+
+## JavaScript concepts
+
+- variables
+- arrays
+    - .filter()
+    - .indexOf()
+    - .splice()
+- objects
+- functions
+    - event handlers
+- if conditionals
+- if...else conditionals
+- module imports & exports
+- document.getElementById()
+- document.querySelector()
+    - selecting elements via data attribute
+- document.addEventListener()
+    - event.target
+    - event.target.dataset
+    - "click"
+    - "submit"
+- element.textContent
+- element.style
+- element.style.display
+- parseInt()
