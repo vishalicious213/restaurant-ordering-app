@@ -14,7 +14,7 @@ I built the project as required, but then moved on to customize it and add featu
 - disabling the rest of the interface when the payment modal was onscreen, so people couldn't change their order while sending a payment
 - a footer
 
-There were *many* JavaScript and CSS concepts used in this projects that weren't needed for the provided design. The customizations called for them. They're included in the sections below.
+There were *many* JavaScript and CSS concepts used in this projects that weren't needed for the provided design. The customizations called for them. They're included in the sections below. Some concepts didn't have JavaScript keywords, like `type coercion`, but that was a fun aspect of data comparisons throughout the building of the application.
 
 Deployed at: https://vish213-jimmys-diner.netlify.app/
 
@@ -56,3 +56,28 @@ Deployed at: https://vish213-jimmys-diner.netlify.app/
 - element.classList.add
 - element.classList.remove
 - parseInt()
+
+## CSS concepts
+
+- display: flex
+    - justify-content
+    - align-items
+    - flex-direction
+- display: none
+- display: inline-block
+- box-shadow
+- cursor: pointer
+- background: url()
+- background-repeat
+- background-size
+- background-position
+- background-color: transparent
+- pointer-events: none
+- text-shadow
+- list-style-type
+- position: fixed
+    - top
+    - left
+- -webkit-outer-spin-button
+- -webkit-inner-spin-button
+- -webkit-appearance: none
