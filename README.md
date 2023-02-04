@@ -90,6 +90,8 @@ Deployed at: https://vish213-jimmys-diner.netlify.app/
     - main
     - section
     - footer
+- importing Google Fonts
+- importing Font Awesome's CDN
 - i-tags (for Font Awesome icons)
 - buttons
     - type="submit"
